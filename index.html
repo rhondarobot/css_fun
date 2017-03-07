@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>spreads</title>
+  <style>
+    h1 {
+      background-color: rgba(255,0,150,0.5);
+      color: rgb(255,255,255);
+      font-size: 32px;
+      text-align: center;
+      margin-top: 40%;
+      padding: 40px;
+    }  
+    .jump span {
+      display: inline-block;
+      transition: transform 0.2s;
+      cursor:url('http://csscursor.info/source/santahand.png'),default;
+    }
+    .jump span:hover {
+      transform: translateY(-20px) rotate(10deg) scale(2);
+      color: rgba(150,0,255,0.3);
+    }
+  </style>  
+</head>
+<body>
+  <header>
+    <h1 class="jump">RHONDA   ROBOT!</h1>
+  </header> 
+<script>
+  const heading = document.querySelector('.jump');
+  heading.innerHTML = sparanWrap(heading.textContent);
+
+  function sparanWrap(word) {
+    return[...word].map(letter => `<span>${letter}</span>`).join('');
+  }
+
+</script>  
+</body>
+</html>
